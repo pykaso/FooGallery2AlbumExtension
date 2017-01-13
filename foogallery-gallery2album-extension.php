@@ -70,7 +70,7 @@ if ( !class_exists( 'Gallery2Album_Template_FooGallery_Extension' ) ) {
 			if (!$album->includes_gallery($post_id)){
 				$galleries = $album->gallery_ids;
 				if (!is_array( $galleries ) ) {				
-					$galleries = [];
+					$galleries = array();
 				}
 				array_push($galleries, $post_id);
 				update_post_meta( $album_id, FOOGALLERY_ALBUM_META_GALLERIES, $galleries );	
